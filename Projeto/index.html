@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="estilos/estilos.css" />
+    <title>Just Music</title>
+</head>
+<body>
+    <video autoplay muted loop id="backgroundvideo">
+        <source src="imagens/bgvideo.mp4" type="video/mp4">
+    </video>
+
+    <section class="banner" id="sec">
+        <header>
+            <a href="#" class="logo pic">
+                <img src="imagens/logo_justmusic.png" width="300px" height="70px" alt="Logo_png">
+            </a>
+            <div id="toggle" onclick="toggle()">
+            </div>
+        </header>
+        <div class="content">
+            <h2>Bem-vindo <br> Nós somos a <span> Just Music</span></h2>
+            <p> A maior escola online de música do Brasil!</p>
+            <a href="#" id="conhecer" onclick="know()">Conhecer</a>  
+        </div>
+
+
+        <ul class="sci">
+            <li><a href="#"><img src="imagens/facebook.png" alt="facebook"></a></li>
+            <li><a href="#"><img src="imagens/twitter.png" alt="twitter"></a></li>
+            <li><a href="#"><img src="imagens/linkedin.png" alt="linkedin"></a></li>
+        </ul>
+
+
+        <div class="bannertwo" id="know" >
+            <ul>
+                <li>
+                    <a href="#"><img class="imagem" src="imagens/instrumentos_pb.png" alt="Instrumentos" id="imginstrumento" onmouseover="mudaCor1('imagens/instrumentos_colorido.png')" onmouseout="mudaCor1('imagens/instrumentos_pb.png')"></a>
+                    <h2 class="conteudotitle">Instrumentos<br></h2>
+                    <p class="conteudop">A nossa plataforma conta com aluguel e vendas de instrumentos para shows, concertos, aulas para alunos, etc. Conheça a nossa loja. <br>
+                        <a href="#" class="click">Clique aqui</a></p>
+                </li>
+
+                <li>
+                   <a href="#"><img class="imagem"src="imagens/professor_pb.png" alt="Professores" id="imgprofessor" onmouseover="mudaCor2('imagens/professor_colorido.png')" onmouseout="mudaCor2('imagens/professor_pb.png')"></a>
+                   <h2 class="conteudotitle">Professores<br></h2>
+                    <p class="conteudop">Todos os nossos professores são mestres em Música, conheça a lista de cursos e seus respectivos professores.<br>
+                        <a href="#" class="click">Clique aqui</a></p>
+                </li>
+
+                <li>
+                    <a href="#"><img class="imagem" src="imagens/projeto_pb.png" alt="Projeto" id="imgprojeto" onmouseover="mudaCor3('imagens/projeto_colorido.png')" onmouseout="mudaCor3('imagens/projeto_pb.png')"></a>
+                    <h2 class="conteudotitle">Projeto<br></h2>
+                    <p class="conteudop">A Just Music surgiu com o objetivo de ensinar música onde professores e alunos não teriam determinadas condições de ir.<br>
+                        <a href="#" class="click">Clique aqui</a></p>
+                </li>
+
+                <li >
+                    <a href="#"><img class="imagem" src="imagens/contato_pb.png" alt="Contato" id="imgcontato" onmouseover="mudaCor4('imagens/contato_colorido.png')" onmouseout="mudaCor4('imagens/contato_pb.png')"></a>
+                    <h2 class="conteudotitle">Contato<br></h2>
+                    <p class="conteudop">Contamos com o suporte a clientes e futuros clientes, onde os mesmos poderão tirar suas dúvidas que não foram solucionadas na plataforma.<br>
+                        <a href="#" class="click">Clique aqui</a></p>
+                </li>
+                
+                <li>
+                    <a href="#"><img class="imagem" src="imagens/cadastro_pb.png" alt="Cadastro" id="imgcadastro" onmouseover="mudaCor5('imagens/cadastro_colorido.png')" onmouseout="mudaCor5('imagens/cadastro_pb.png')"></a>
+                    <h2 class="conteudotitle">Cadastro<br></h2>
+                    <p class="conteudop">Para se cadastrar é fácil, tenha em mãos seus documentos e dados bancários para realizar a assinatura vitalícia. <br>
+                        <a href="#" class="click">Clique aqui</a></p>
+                </li>
+        </div>
+
+
+    </section>
+
+    <div id="navigation">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Cursos</a></li>
+            <li><a href="#">Professores</a></li>
+            <li><a href="#">Projeto</a></li>
+            <li><a href="#">Contato</a></li>
+            <li><a href="#">Cadastrar-se</a></li>
+        </ul>
+    </div>
+
+    
+
+    <script type="text/javascript">
+    function toggle(){
+        var sec = document.getElementById('sec');
+        var nav = document.getElementById('navigation');
+        sec.classList.toggle('active');
+        nav.classList.toggle('active');
+    }
+
+    function know(){
+        var con = document.getElementById('know');
+        con.classList.toggle('active');
+    }
+
+    function mudaCor1(opc){
+        document.getElementById("imginstrumento").src=opc;    
+    }
+    function mudaCor2(opc){
+        document.getElementById("imgprofessor").src=opc;
+    }
+    function mudaCor3(opc){
+        document.getElementById("imgprojeto").src=opc;
+    }
+    function mudaCor4(opc){
+        document.getElementById("imgcontato").src=opc;
+    }
+    function mudaCor5(opc){
+        document.getElementById("imgcadastro").src=opc;
+    }
+
+    </script>
+</body>
+</html>
